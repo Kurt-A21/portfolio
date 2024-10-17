@@ -6,7 +6,7 @@ const App: React.FC = () => {
   const [showHero, setShowHero] = useState<boolean>(false);
 
   const handleIntroFinish = (): void => {
-    setShowHero(true); // Transition to Hero section
+    setShowHero(true);
   };
 
   return (

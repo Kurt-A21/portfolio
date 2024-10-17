@@ -23,20 +23,20 @@ const IntroSection: React.FC<IntroProps> = ({ onFinish }) => {
   );
 
   const [currentWordIndex, setCurrentWordIndex] = useState<number>(0);
-  const [speed, setSpeed] = useState<number>(1000); // Starting speed in milliseconds
-  const [isFinished, setIsFinished] = useState<boolean>(false); // State to control slide-up effect
+  const [speed, setSpeed] = useState<number>(1000);
+  const [isFinished, setIsFinished] = useState<boolean>(false); 
 
   useEffect(() => {
     if (currentWordIndex < greetings.length) {
       const timer = setTimeout(() => {
         setCurrentWordIndex((prevIndex) => prevIndex + 1);
-        setSpeed((prevSpeed) => prevSpeed * 0.9); // Speed increases by reducing delay
+        setSpeed((prevSpeed) => prevSpeed * 0.9); 
       }, speed);
 
       return () => clearTimeout(timer);
     } else {
-      setIsFinished(true); // Set finished state to trigger slide-up
-      setTimeout(onFinish, 300); // Delay to allow slide-up animation to finish before calling onFinish
+      setIsFinished(true); 
+      setTimeout(onFinish, 300); 
     }
   }, [currentWordIndex, speed, greetings, onFinish]);
 
