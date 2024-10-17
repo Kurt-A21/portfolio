@@ -10,33 +10,31 @@ const IntroSection: React.FC<IntroProps> = ({ onFinish }) => {
     () => [
       "Hello",
       "Bonjour",
-      "Dag",
       "Hola",
-      "Ciao",
-      "Hallo",
-      "Hej",
-      "Ola",
-      "Salut",
-      "Zdravstvuyte",
+      "Goeiedag",
+      "Molo",
+      "Sawubona",
+      "你好!",
+      "Konnichiwa",
     ],
     []
   );
 
   const [currentWordIndex, setCurrentWordIndex] = useState<number>(0);
   const [speed, setSpeed] = useState<number>(1000);
-  const [isFinished, setIsFinished] = useState<boolean>(false); 
+  const [isFinished, setIsFinished] = useState<boolean>(false);
 
   useEffect(() => {
     if (currentWordIndex < greetings.length) {
       const timer = setTimeout(() => {
         setCurrentWordIndex((prevIndex) => prevIndex + 1);
-        setSpeed((prevSpeed) => prevSpeed * 0.9); 
+        setSpeed((prevSpeed) => prevSpeed * 0.9);
       }, speed);
 
       return () => clearTimeout(timer);
     } else {
-      setIsFinished(true); 
-      setTimeout(onFinish, 300); 
+      setIsFinished(true);
+      setTimeout(onFinish, 300);
     }
   }, [currentWordIndex, speed, greetings, onFinish]);
 
