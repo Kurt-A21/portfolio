@@ -39,7 +39,7 @@ const IntroSection: React.FC<IntroProps> = ({ onFinish }) => {
   }, [currentWordIndex, speed, greetings, onFinish]);
 
   return (
-    <div className={`intro-section ${isFinished ? "slide-up" : ""}`}>
+    <div className={`intro-section layout ${isFinished ? "slide-up" : ""}`}>
       <h1>{greetings[currentWordIndex]}</h1>
     </div>
   );

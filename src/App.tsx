@@ -10,7 +10,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className="body">
       {!showHero && <IntroSection onFinish={handleIntroFinish} />}
       {showHero && <Hero />}
     </div>
