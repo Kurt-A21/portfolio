@@ -1,3 +1,38 @@
-.textChange {
-  color: blue;
+.nav-bar {
+  position: fixed;
+  bottom: 5px;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.nav-bar nav {
+  width: 90vw;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-bar ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style-type: none;
+  margin: 0;
+  padding: 1rem 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-bar {
+    top: 0;
+    bottom: auto;
+    justify-content: center;
+  }
+
+  .nav-bar nav {
+    width: 60vw;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
 }

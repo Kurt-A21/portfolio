@@ -1,7 +1,17 @@
 .intro-section {
+  background-color: #434141;
+  color: #ffff;
+  height: 100vh;
   transition: transform 0.5s ease, opacity 0.5s ease;
   transform: translateY(0);
   opacity: 1;
+}
+
+.intro-section.layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .intro-section.slide-up {
